@@ -1,0 +1,156 @@
+
+
+
+
+.container input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    
+  }
+  
+  .container {
+    position: relative;
+    cursor: pointer;
+    font-size: 15px;
+    width: 5em;
+    height: 2.5em;
+  }
+  
+  .selected {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  #leftradio {
+    border-bottom-left-radius: 2.5em;
+    border-top-left-radius: 2.5em;
+  
+    border-bottom-right-radius: 2.5em;
+    border-top-right-radius: 2.5em;
+      
+    border: 3px solid blue;
+    background-color: transparent;
+    transition: 0.2s;
+  }
+  
+  #rightradio {
+    border-bottom-left-radius: 2.5em;
+    border-top-left-radius: 2.5em;
+  
+    border-bottom-right-radius: 2.5em;
+    border-top-right-radius: 2.5em;
+  
+    border: 3px solid red;
+    background-color: transparent;
+    transition: 0.2s;
+  }
+  
+  #middleradio {
+    border-bottom-left-radius: 2.5em;
+    border-top-left-radius: 2.5em;
+  
+    border-bottom-right-radius: 2.5em;
+    border-top-right-radius: 2.5em;
+  
+    border: 3px solid yellow;
+    background-color: transparent;
+    transition: 0.2s;
+  }
+  
+  
+  .selected:after {
+    content:'';
+    position: absolute;
+    background-color: 78cce2;
+    width: 100%;
+    height: 90%;
+    transform: scale(0);
+  }
+  
+  #leftradio:hover {
+    border-bottom-left-radius: 2.5em;
+    border-top-left-radius: 2.5em;
+  
+    border-bottom-right-radius: 2.5em;
+    border-top-right-radius: 2.5em;
+  
+    background-color: transparent;
+  }
+  
+  #leftradio::after {
+    top: 0%;
+    height: 100%;
+    border-bottom-left-radius: 2.5em;
+    border-top-left-radius: 2.5em;
+  
+    border-bottom-right-radius: 2.5em;
+    border-top-right-radius: 2.5em;
+  
+    border: none;
+    background-color: blue;
+    box-shadow: 0em 0em 5em 0.8em blue;}
+  
+  #rightradio:hover {
+    border-bottom-left-radius: 2.5em;
+    border-top-left-radius: 2.5em;
+  
+    border-bottom-right-radius: 2.5em;
+    border-top-right-radius: 2.5em;
+  
+    background-color: transparent;
+  }
+  
+  #rightradio::after {
+    left: -3%;
+    top: -1%;
+    border-bottom-left-radius: 2.5em;
+    border-top-left-radius: 2.5em;
+  
+    border-bottom-right-radius: 2.5em;
+    border-top-right-radius: 2.5em;
+  
+    border: 3px solid red;
+    background-color: red;
+     box-shadow: 0em 0em 5em 0.8em red;
+  }
+  
+  #middleradio:hover {
+  background-color: transparent;
+  }
+  
+  #middleradio::after {
+    border-bottom-left-radius: 2.5em;
+    border-top-left-radius: 2.5em;
+  
+    border-bottom-right-radius: 2.5em;
+    border-top-right-radius: 2.5em;
+  
+    left: -3%;
+    top: -3%;
+    border: 3px solid #ffff00;
+    background-color: #ffff00;
+    box-shadow: 0em 0em 5em 0.8em #ffff00;
+  }
+  .option {
+    position: relative;
+    display: inline-block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none;
+    color: black;
+    border-radius: 14px;
+    padding: 10px;
+  }
+  .container input[type="radio"]:checked ~ .selected:after {
+    transform: scale(1);
+  }
+  
+  
+  
+  
